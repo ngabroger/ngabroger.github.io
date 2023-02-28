@@ -1,7 +1,13 @@
 .jumbotron {
   padding-top: 6rem;
-  background-color: #eae6e6;
+  background-image: url("images/bg-img.png");
+  background-size: cover;
+  background-attachment: fixed;
+  font-weight: bold;
+  background-position: 0 -100px;
+  color: #000;
 }
+
 #projects {
   background-color: #eae6e6;
 }
