@@ -30,3 +30,11 @@
 section {
   padding-top: 5rem;
 }
+
+#preloader {
+  background: #a8a7a7ee url(images/preloader.gif) no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
