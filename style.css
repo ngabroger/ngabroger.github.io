@@ -20,8 +20,11 @@
 .hovered-card {
   transition: 0.3s;
 }
-#contact {
+#skill {
   background-color: #baff39;
+}
+#contact {
+  background-color: #eae6e6;
 }
 .hovered-card:hover {
   transform: scale(1.1);
