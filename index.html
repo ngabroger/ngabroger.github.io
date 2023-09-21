@@ -40,6 +40,9 @@
                 <a class="nav-link" href="#projects">Projects</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="#skill">Skill</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="#contact">Contact Me</a>
               </li>
             </ul>
@@ -93,21 +96,24 @@
               <h2>My Project</h2>
             </div>
           </div>
+          <div id="liveAlertPlaceholder"></div>
           <div class="row text-center justify-content-center">
             <div class="col-md-3 hovered-card mb-3">
               <div class="card">
-                <a href="https://rogersimanjuntak.github.io/TernakCupang/"><img href="#" src="images/project1.png" class="card-img-top" alt="..." /></a>
+                <img href="#" src="images/project1.png" class="card-img-top" alt="..." />
                 <div class="card-body">
                   <p class="card-text">This is my first project of my website , i created a website static about Rumah Cupang it is Course how to care for hickey</p>
+                  <a href="https://ngabroger.github.io/TernakCupang/" class="btn btn-primary">Visit Now</a>
                 </div>
               </div>
             </div>
 
             <div class="col-md-3 hovered-card mb-3">
               <div class="card">
-                <a href="https://rogersimanjuntak.github.io/RosalShop/pages/homepage.html"> <img src="images//project2.png" class="card-img-top" alt="..." /></a>
+                <img src="images//project2.png" class="card-img-top" alt="..." />
                 <div class="card-body">
                   <p class="card-text">This is my website about backeryshop and solo project , the main part is Homepage,Registerpage that contain database CRUD,it using a xml</p>
+                  <a href="https://ngabroger.github.io/RosalShop/pages/homepage.html" class="btn btn-primary"> Visit Now</a>
                 </div>
               </div>
             </div>
@@ -116,14 +122,17 @@
                 <img src="images//project3.jpg" class="card-img-top" alt="..." />
                 <div class="card-body">
                   <p class="card-text">this is my team application project ,the application about movie catalogue that get it from API MovieDB</p>
+                  <a id="liveAlertBtn1" class="btn btn-primary btn-404"> Visit Now</a>
                 </div>
               </div>
             </div>
+
             <div class="col-md-3 hovered-card mb-3">
               <div class="card">
                 <img src="images//project4.jpg" class="card-img-top" alt="..." />
                 <div class="card-body">
                   <p class="card-text">This is my Project about application Bank Accout , the application can deposite, withdraw, and transfer. It using a CRUD Java</p>
+                  <a id="liveAlertBtn2" class="btn btn-primary btn-404"> Visit Now</a>
                 </div>
               </div>
             </div>
@@ -132,6 +141,16 @@
                 <img src="images//project5.jpg" class="card-img-top" alt="..." />
                 <div class="card-body">
                   <p class="card-text">This is my Project about Library JSF Database , the Website can borrow book, check list book, and returning book. It using a JSF</p>
+                  <a id="liveAlertBtn3" class="btn btn-primary btn-404"> Visit Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 hovered-card mb-3">
+              <div class="card">
+                <img src="images/project6.png" class="card-img-top" alt="lospoloshermanos" />
+                <div class="card-body">
+                  <p class="card-text">This is my Project about Dining Restaurant , the user can buy on that website , you can try the website by click the image of the project.</p>
+                  <a id="liveAlertBtn4" href="https://restaurant-web-rouge.vercel.app" class="btn btn-primary btn-404"> Visit Now</a>
                 </div>
               </div>
             </div>
@@ -165,6 +184,18 @@
                 <h4 class="mb-3">JavaScript</h4>
                 <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
                   <div class="progress-bar bg-warning" style="width: 50%">50%</div>
+                </div>
+              </div>
+              <div class="col-md-6 mt-4">
+                <h4 class="mb-3">Dart</h4>
+                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar bg-default" style="width: 50%">65%</div>
+                </div>
+              </div>
+              <div class="col-md-6 mt-4">
+                <h4 class="mb-3">PHP</h4>
+                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar bg-secondary" style="width: 50%">25%</div>
                 </div>
               </div>
             </div>
@@ -246,7 +277,28 @@
         loop: true,
       });
     </script>
+    <script>
+      const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
 
+      const alert = (message, type) => {
+        const wrapper = document.createElement("div");
+        wrapper.innerHTML = [`<div class="alert alert-${type} alert-dismissible" role="alert">`, `   <div>${message}</div>`, '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>', "</div>"].join(
+          ""
+        );
+
+        alertPlaceholder.append(wrapper);
+      };
+
+      const alertTriggers = document.querySelectorAll(".btn-404");
+      alertTriggers.forEach((alertTrigger) => {
+        alertTrigger.addEventListener("click", (event) => {
+          event.preventDefault(); // Prevent the default button click behavior
+          alertTrigger.disabled = true; // Disable the button
+          const message = `Maaf untuk Demo Masih Belum ada`;
+          alert(message, "danger");
+        });
+      });
+    </script>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
