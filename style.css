@@ -41,3 +41,8 @@ section {
   position: fixed;
   z-index: 100;
 }
+.smaller-image {
+  max-width: 33%;
+  margin: 0 auto;
+  height: auto;
+}
