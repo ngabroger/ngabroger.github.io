@@ -7,265 +7,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" /> -->
 
     <!-- style css -->
     <link rel="stylesheet" href="style.css" />
     <!-- icon inport -->
     <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.min.css" />
-    <link rel="shortcut icon" href="images/logo.png" />
+    <link rel="shortcut icon" href="resource/images/logo.svg" />
+    <link rel="stylesheet" href="resource/css/outputadmin.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="node_modules/flowbite/dist/flowbite.min.js"></script>
   </head>
 
-  <body>
+  <body class="bg-[#40D12]">
+    <div>
     <header>
       <div id="preloader"></div>
-      <nav class="fixed-top navbar navbar-light navbar-expand-lg bg-body-tertiary shadow" style="background-color: #fff">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="images/logo.png" alt="" height="40" />
-            Ngab Roger
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+      <nav class="bg-[#092635] border-gray-200 dark:bg-gray-900">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="resource/images/logo.svg" class=" w-12 " alt="Flowbite Logo" />
+            <span class="self-center text-2xl text-[#9EC8B9] font-semibold whitespace-nowrap dark:text-white">Ngabroger</span>
+        </a>
+       
+           
+            <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#Home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#projects">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#skill">Skill</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact Me</a>
-              </li>
-            </ul>
-          </div>
+
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 " id="navbar-cta">
+          <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  ">
+            <li>
+              <a href="#" class="block py-2 px-3 md:p-0 text-[#93B1A6] hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#5C8374] " aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 md:p-0 text-[#93B1A6] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#5C8374]  ">About</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 md:p-0 text-[#9EC8B9] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#5C8374]  ">Services</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 md:p-0 text-[#9EC8B9] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#5C8374]  ">Contact</a>
+            </li>
+          </ul>
+        </div>
         </div>
       </nav>
     </header>
     <main>
-      <!-- bagian hero section -->
-      <section class="jumbotron text-center" id="Home">
-        <img src="images/pp.png" alt="Roger" width="200" class="hovered-card rounded-circle img-thumbnail" />
-        <h1 class="display-4">I'm <span class="auto-input"></span></h1>
-        <p class="lead">Welcome To My Page</p>
-        <svg class="jumbutron-gelombang" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#baff39"
-            fill-opacity="1"
-            d="M0,128L40,138.7C80,149,160,171,240,160C320,149,400,107,480,117.3C560,128,640,192,720,186.7C800,181,880,107,960,112C1040,117,1120,203,1200,208C1280,213,1360,139,1400,101.3L1440,64L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-          ></path>
-        </svg>
-      </section>
-      <!-- bagian hero section akhir -->
-      <!-- Awal About -->
-      <section id="about">
-        <div class="container">
-          <div class="row text-center mb-4 m-0">
-            <div class="col">
-              <h2>About Me</h2>
-            </div>
+      <section class="bg-[#092635] dark:bg-gray-900 max-w-full h-screen">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-8">
+        
+          <h1 class=" text-4xl font-semibold tracking-tight leading-none text-[#9EC8B9] md:text-4xl lg:text-4xl dark:text-white mb-2">Roger Simanjuntak</h1>
+          <p class=" text-sm  font-semibold text-[#5C8374] lg:text-lg sm:px-16 lg:px-48 dark:text-gray-400 mb-5">Fullstack Web & Android Developer</p>
+            <button type="button" class=" text-white bg-gradient-to-br from-[#1c3e35] via-[#2a454b] to-[#294861] hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-3.5 text-center me-2 mb-2">My Project</button>
+            <button class="relative inline-flex items-center justify-center p-0.5 mb-2 overflow-hidden text-sm font-medium text-white rounded-lg group bg-gradient-to-br from-[#1c3e35] via-[#2a454b] to-[#294861] group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+              <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-[#092635] dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 inline-flex items-center">
+                Download CV
+                <span class="  text-sm material-symbols-outlined">
+                  download
+                </span>
+              </span>
+            </button>
           </div>
-          <div class="row justify-content-center fs-5 text-center">
-            <div class="col-md-4">Jakarta State Polytechnic Student Department of Informatics Engineering Semester 2 and CCIT FTUI Software Engineering Semester 4th</div>
-            <div class="col-md-4">My daily do is sleeping, Coding, helping my mother , playing games</div>
-          </div>
+        
+          <div class="relative flex items-center justify-center">
+            <img src="resource/images/1.png" class="absolute bottom-0 z-0 left-1/2 -translate-x-1/2 max-w-full " alt="">
+            <img src="resource/images/2.png" class="relative z-10 max-w-full max-h-full  " alt="">
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#eae6e6"
-            fill-opacity="1"
-            d="M0,96L40,117.3C80,139,160,181,240,218.7C320,256,400,288,480,261.3C560,235,640,149,720,117.3C800,85,880,107,960,149.3C1040,192,1120,256,1200,266.7C1280,277,1360,235,1400,213.3L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-          ></path>
-        </svg>
-      </section>
-      <!-- Akhir About -->
-
-      <!-- Project Awal -->
-      <section id="projects">
-        <div class="container">
-          <div class="row text-center">
-            <div class="col mb-5">
-              <h2>My Project</h2>
-            </div>
-          </div>
-          <div id="liveAlertPlaceholder"></div>
-          <div class="row text-center justify-content-center">
-            <div class="col-md-3 hovered-card mb-3">
-              <div class="card">
-                <img href="#" src="images/project1.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <p class="card-text">This is my first project of my website , i created a website static about Rumah Cupang it is Course how to care for hickey</p>
-                  <a href="https://ngabroger.github.io/TernakCupang/" class="btn btn-primary">Visit Now</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3 hovered-card mb-3">
-              <div class="card">
-                <img src="images//project2.png" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <p class="card-text">This is my website about backeryshop and solo project , the main part is Homepage,Registerpage that contain database CRUD,it using a xml</p>
-                  <a href="https://ngabroger.github.io/RosalShop/pages/homepage.html" class="btn btn-primary"> Visit Now</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 hovered-card mb-3">
-              <div class="card">
-                <img src="images//project3.jpg" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <p class="card-text">this is my team application project ,the application about movie catalogue that get it from API MovieDB</p>
-                  <a id="liveAlertBtn1" class="btn btn-primary btn-404"> Visit Now</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3 hovered-card mb-3">
-              <div class="card">
-                <img src="images//project4.jpg" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <p class="card-text">This is my Project about application Bank Accout , the application can deposite, withdraw, and transfer. It using a CRUD Java</p>
-                  <a id="liveAlertBtn2" class="btn btn-primary btn-404"> Visit Now</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 hovered-card mb-3">
-              <div class="card">
-                <img src="images//project5.jpg" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <p class="card-text">This is my Project about Library JSF Database , the Website can borrow book, check list book, and returning book. It using a JSF</p>
-                  <a id="liveAlertBtn3" class="btn btn-primary btn-404"> Visit Now</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 hovered-card mb-3">
-              <div class="card">
-                <img src="images/project6.png" class="card-img-top" alt="lospoloshermanos" />
-                <div class="card-body">
-                  <p class="card-text">This is my Project about Dining Restaurant , the user can buy on that website , the database in website using firebase, you can try the website by click the image of the project.</p>
-                  <a href="https://restaurant-web-rouge.vercel.app" class="btn btn-primary mt-4"> Visit Now</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 hovered-card mb-3">
-              <div class="card">
-                <img src="images/project7.png" class="card-img-top smaller-image" alt="lospoloshermanos" />
-                <div class="card-body">
-                  <p class="card-text">This is my project that have been done is about application in android , the project is continuing my last project about website with firebase</p>
-                  <a id="liveAlertBtn3" class="btn btn-primary btn-404"> Visit Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
+        
+      
+           
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#BAFF39"
-            fill-opacity="1"
-            d="M0,192L40,208C80,224,160,256,240,256C320,256,400,224,480,218.7C560,213,640,235,720,256C800,277,880,299,960,272C1040,245,1120,171,1200,149.3C1280,128,1360,160,1400,176L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-          ></path>
-        </svg>
-      </section>
-      <!-- Project Akhir -->
-      <section id="skill">
-        <div class="container-fluid">
-          <div class="container">
-            <div class="row text-center">
-              <div class="col mb-3">
-                <h2>My Skill</h2>
-              </div>
-            </div>
-            <div class="row mb-5">
-              <div class="col-md-6 mt-3">
-                <h4 class="mb-3 text-left">Java</h4>
-                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                  <div class="progress-ba bg-success text-center" style="width: 75%">75%</div>
-                </div>
-              </div>
-              <div class="col-md-6 mt-3">
-                <h4 class="mb-3">JavaScript</h4>
-                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                  <div class="progress-bar bg-warning" style="width: 50%">50%</div>
-                </div>
-              </div>
-              <div class="col-md-6 mt-4">
-                <h4 class="mb-3">Dart</h4>
-                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                  <div class="progress-bar bg-default" style="width: 65%">65%</div>
-                </div>
-              </div>
-              <div class="col-md-6 mt-4">
-                <h4 class="mb-3">PHP</h4>
-                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                  <div class="progress-bar bg-secondary" style="width: 25%">15%</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#eae6e6"
-            fill-opacity="1"
-            d="M0,96L48,128C96,160,192,224,288,218.7C384,213,480,139,576,144C672,149,768,235,864,250.7C960,267,1056,213,1152,208C1248,203,1344,245,1392,266.7L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          ></path>
-        </svg>
-      </section>
-      <!-- Contact AWAL -->
-      <section id="contact">
-        <div class="container-fluid">
-          <div class="container">
-            <div class="row text-center">
-              <div class="col mb-5">
-                <h2>My Contact</h2>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 hovered-card">
-                <div class="justify-content-center">
-                  <div class="icon-service d-flex justify-content-center">
-                    <i class="fa-solid fa-at display-5"></i>
-                  </div>
-                </div>
-                <div class="mt-3 text-center text-dark">
-                  <h4>E-mail</h4>
-                  <p>roger.simanjuntak21@gmail.com</p>
-                </div>
-              </div>
-              <div class="col-md-4 hovered-card">
-                <div class="justify-content-center">
-                  <div class="icon-service d-flex align-items-center justify-content-center">
-                    <i class="fa-brands fa-whatsapp display-5"></i>
-                  </div>
-                </div>
-                <div class="mt-3 text-center text-dark">
-                  <h4>WhatsApp</h4>
-                  <p>(+62) 85156295013</p>
-                </div>
-              </div>
-              <div class="col-md-4 hovered-card">
-                <div class="justify-content-center">
-                  <div class="icon-service d-flex align-items-center justify-content-center">
-                    <i class="fa-brands fa-linkedin-in display-5"></i>
-                  </div>
-                </div>
-                <div class="mt-3 text-center text-dark">
-                  <h4>Linkedin</h4>
-                  <p>https://www.linkedin.com/in/roger-simanjuntak-488897174/</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Contact AKHIR  -->
+    </section>
     </main>
     <footer>
       <!-- place footer here -->
@@ -310,7 +127,7 @@
     </script>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script> -->
     <script>
       feather.replace();
     </script>
