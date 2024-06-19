@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <title>My Portofilo | Ngab Roger</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Bootstrap CSS v5.2.1 -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" /> -->
-
-    <!-- style css -->
-    <link rel="stylesheet" href="style.css" />
-    <!-- icon inport -->
-    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.min.css" />
     <link rel="shortcut icon" href="resource/images/logo.svg" />
     <link rel="stylesheet" href="resource/css/outputadmin.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <script src="node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="./resource/js/flowbite.min.js"></script>
     <link rel="stylesheet" href="/resource/css/style.css" />
   </head>
   <style>
+    html {
+      scrollbar-width: none; /* Firefox */
+    }
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -30,16 +26,21 @@
         transform: translateY(0);
       }
     }
-
-    .animate-fade-in {
-      animation: fadeIn 1s ease-in-out;
+    .project {
+      display: none;
+      animation: fadeIn 0.3s ease-in-out forwards;
+    }
+    .category-button.active {
+      background-color: #183d3d; /* Tailwind's blue-500 */
+      color: white;
+      border-color: #93b1a6;
     }
   </style>
   <body class="bg-secondary">
     <header>
       <nav class="bg-secondary dark:bg-gray-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <a href="#home" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="resource/images/logo.svg" class="w-12" alt="Flowbite Logo" />
             <span class="self-center text-2xl text-[#9EC8B9] font-semibold whitespace-nowrap">Ngabroger</span>
           </a>
@@ -61,13 +62,13 @@
                 <a href="#" class="block py-2 px-3 md:p-0 text-greenLight hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#5C8374]" aria-current="page">Home</a>
               </li>
               <li>
-                <a href="#" class="block py-2 px-3 md:p-0 text-greenLight rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#5C8374]">About</a>
+                <a href="#about" class="block py-2 px-3 md:p-0 text-greenLight rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#5C8374]">About</a>
               </li>
               <li>
-                <a href="#" class="block py-2 px-3 md:p-0 text-greenLight rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#5C8374]">Services</a>
+                <a href="#service" class="block py-2 px-3 md:p-0 text-greenLight rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#5C8374]">Services</a>
               </li>
               <li>
-                <a href="#" class="block py-2 px-3 md:p-0 text-greenLight rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#5C8374]">Contact</a>
+                <a href="#contact" class="block py-2 px-3 md:p-0 text-greenLight rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#5C8374]">Contact</a>
               </li>
             </ul>
           </div>
@@ -75,24 +76,25 @@
       </nav>
     </header>
     <main class="">
-      <section class="dark:bg-gray-900 animate-fade-in mb-5 max-w-full h-screen">
+      <section class="dark:bg-gray-900 animate-fade-in mb-5 max-w-full h-screen" id="Home">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-8">
           <h1 class="text-4xl font-semibold tracking-tight leading-none text-greenDark md:text-4xl lg:text-4xl mb-2">Roger Simanjuntak</h1>
-          <p class="text-sm font-semibold text-greenLight lg:text-lg sm:px-16 lg:px-48 dark:text-gray-400 mb-5">Fullstack Web & Android Developer</p>
-          <button
-            type="button"
+          <p class="text-sm font-semibold text-greenLight lg:text-lg sm:px-16 lg:px-48 dark:text-gray-400 mb-5">Fullstack Web & Mobile Developer</p>
+          <a
+            href="#project"
             class="text-white bg-gradient-to-br from-[#1c3e35] via-[#2a454b] to-[#294861] hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-3.5 text-center me-2 mb-2"
           >
             My Project
-          </button>
-          <button
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1cBzFLH42YglI8xqW8RSV1ZG7tpDFmBxN/view?usp=sharing"
             class="relative inline-flex items-center justify-center p-0.5 mb-2 overflow-hidden text-sm font-medium text-white rounded-lg group bg-[#5C8374] hover:bg-[#5C8374] hover:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800"
           >
             <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-secondary dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 inline-flex items-center">
               Download CV
               <span class="text-sm material-symbols-outlined"> download </span>
             </span>
-          </button>
+          </a>
         </div>
         <div class="relative flex items-center justify-center max-w-full">
           <img src="resource/images/1.png" class="absolute bottom-0 z-0 left-1/2 -translate-x-1/2 max-w-[300px] max-h-[300px]" alt="" />
@@ -143,7 +145,7 @@
           </div>
         </div>
       </section>
-      <section class="max-w-full h-fit">
+      <section class="max-w-full h-fit" id="about">
         <h2 class="justify-center flex text-3xl text-greenDark font-bold mb-3">My Profile</h2>
         <h2 class="justify-center flex text-xl text-greenLight font-semibold">About Me</h2>
         <div class="flex justify-center pb-32">
@@ -152,15 +154,15 @@
               <div class="max-w-full h-40">
                 <img src="/resource/images/pp.png" class="rounded-lg w-96 object-cover h-full" alt="" />
               </div>
-              <button
-                type="button"
+              <a
+                href="https://www.linkedin.com/in/ngabroger/"
                 class="text-white group bg-green-700 mt-3 hover:bg-primary transition focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 <svg class="rtl:rotate-180 w-5 h-5 me-2 transition-transform group-hover:-translate-x-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4" />
                 </svg>
                 Let's Connect
-              </button>
+              </a>
             </div>
 
             <div class="max-w-96">
@@ -213,7 +215,7 @@
                 <div class="mt-3 sm:pe-8">
                   <h3 class="text-lg font-semibold text-greenLight dark:text-white">CEP-CCIT FTUI</h3>
                   <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Studied on August 2021 - November 2023 </time>
-                  <p class="text-base font-normal text-gray-300 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
+                  <p class="text-base font-normal text-gray-300 dark:text-gray-400">2 Years Creating my Mentality Programming</p>
                 </div>
               </li>
               <li class="relative mb-6 sm:mb-0">
@@ -226,7 +228,7 @@
                 <div class="mt-3 sm:pe-8">
                   <h3 class="text-lg font-semibold text-greenLight dark:text-white">Id Camp 2023</h3>
                   <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Studied on July 2023 - February 2024</time>
-                  <p class="text-base font-normal text-gray-300 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
+                  <p class="text-base font-normal text-gray-300 dark:text-gray-400">Studied Bootcamp in Id Camp for 4 month in Multi Platform Programming</p>
                 </div>
               </li>
               <li class="relative mb-6 sm:mb-0">
@@ -239,7 +241,7 @@
                 <div class="mt-3 sm:pe-8">
                   <h3 class="text-lg font-semibold text-greenLight dark:text-white">State Polytechnic of Jakarta</h3>
                   <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Studied on August 2022 - Present</time>
-                  <p class="text-base font-normal text-gray-300 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
+                  <p class="text-base font-normal text-gray-300 dark:text-gray-400"></p>
                 </div>
               </li>
             </ol>
@@ -508,7 +510,7 @@
           </div>
         </div>
       </section>
-      <section class="h-screen max-w-full p-5 mt-24">
+      <section class="h-fit max-w-full p-5 mt-24" id="service">
         <h2 class="justify-center flex text-3xl text-greenDark font-bold mb-3">My Job</h2>
         <h2 class="justify-center flex text-xl text-greenLight font-semibold mb-5">Services</h2>
         <div class="max-w-5xl mx-auto bg-primary rounded-lg shadow">
@@ -516,7 +518,7 @@
             <li class="me-2">
               <button
                 id="about-tab"
-                data-tabs-target="#about"
+                data-tabs-target="#about1"
                 type="button"
                 role="tab"
                 aria-controls="about"
@@ -541,7 +543,7 @@
             </li>
           </ul>
           <div id="defaultTabContent">
-            <div class="hidden p-4 bg-primary rounded-lg md:p-8 dark:bg-gray-800 transition duration-500 ease-in-out transform" id="about" role="tabpanel" aria-labelledby="about-tab">
+            <div class="hidden p-4 bg-primary rounded-lg md:p-8 dark:bg-gray-800 transition duration-500 ease-in-out transform" id="about1" role="tabpanel" aria-labelledby="about-tab">
               <h2 class="mb-5 text-2xl font-extrabold tracking-tight text-greenLight dark:text-white">I can create Web Development using PHP , HTML and Laravel</h2>
               <ul role="list" class="space-y-4 text-gray-400 dark:text-gray-400">
                 <li class="flex space-x-2 rtl:space-x-reverse items-center">
@@ -590,22 +592,648 @@
           </div>
         </div>
       </section>
+      <section class="w-full h-screen mt-20" id="project">
+        <h2 class="justify-center flex text-3xl text-greenDark font-bold mb-3">My Project</h2>
+        <h2 class="justify-center flex text-xl text-greenLight font-semibold">Project</h2>
+        <div class="max-w-5xl mx-auto">
+          <div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
+            <button
+              type="button"
+              data-category="all"
+              aria-current="page"
+              class="text-gray-900 active category-button hover:bg-greenDark hover:border-gray-200 bg-greenLight focus:outline-none f rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3"
+            >
+              All Project
+            </button>
+            <button type="button" data-category="web" class="text-gray-900 category-button hover:bg-greenDark hover:border-gray-200 bg-greenLight focus:outline-none f rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3">
+              Web Development
+            </button>
+            <button type="button" data-category="mobile" class="text-gray-900 category-button hover:bg-greenDark hover:border-gray-200 bg-greenLight focus:outline-none f rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3">
+              Mobile Development
+            </button>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mx-3">
+            <div class="relative group project" data-category="web">
+              <a data-modal-target="default-modal" data-modal-toggle="default-modal" class="absolute cursor-pointer inset-0 flex items-center justify-center z-10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >Show More</a
+              >
+              <img class="h-auto max-w-full rounded-lg object-cover transition duration-300 group-hover:brightness-50" src="resource/images/project/1.jpg" alt="" />
+            </div>
+            <div class="relative group project" data-category="web">
+              <a
+                data-modal-target="default-modal2"
+                data-modal-toggle="default-modal2"
+                class="absolute cursor-pointer inset-0 flex items-center justify-center z-10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >Show More</a
+              >
+              <img class="h-auto max-w-full rounded-lg object-cover transition duration-300 group-hover:brightness-50" src="resource/images/project/2.jpg" alt="" />
+            </div>
+            <div class="relative group project" data-category="web">
+              <a
+                data-modal-target="default-modal3"
+                data-modal-toggle="default-modal3"
+                class="absolute cursor-pointer inset-0 flex items-center justify-center z-10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >Show More</a
+              >
+              <img class="h-auto max-w-full rounded-lg object-cover transition duration-300 group-hover:brightness-50" src="resource/images/project/3.jpg" alt="" />
+            </div>
+            <div class="relative group project" data-category="web">
+              <a
+                data-modal-target="default-modal4"
+                data-modal-toggle="default-modal4"
+                class="absolute cursor-pointer inset-0 flex items-center justify-center z-10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >Show More</a
+              >
+              <img class="h-auto max-w-full rounded-lg object-cover transition duration-300 group-hover:brightness-50" src="resource/images/project/4.jpg" alt="" />
+            </div>
+            <div class="relative group project" data-category="mobile">
+              <a
+                data-modal-target="default-modal5"
+                data-modal-toggle="default-modal5"
+                class="absolute cursor-pointer inset-0 flex items-center justify-center z-10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >Show More</a
+              >
+              <img class="h-auto max-w-full rounded-lg object-cover transition duration-300 group-hover:brightness-50" src="resource/images/project/5.jpg" alt="" />
+            </div>
+            <div class="relative group project" data-category="mobile">
+              <a
+                data-modal-target="default-modal6"
+                data-modal-toggle="default-modal6"
+                class="absolute cursor-pointer inset-0 flex items-center justify-center z-10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >Show More</a
+              >
+              <img class="h-auto max-w-full rounded-lg object-cover transition duration-300 group-hover:brightness-50" src="resource/images/project/6.jpg" alt="" />
+            </div>
+            <div class="relative group project" data-category="mobile">
+              <a
+                data-modal-target="default-modal7"
+                data-modal-toggle="default-modal7"
+                class="absolute cursor-pointer inset-0 flex items-center justify-center z-10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >Show More</a
+              >
+              <img class="h-auto max-w-full rounded-lg object-cover transition duration-300 group-hover:brightness-50" src="resource/images/project/7.jpg" alt="" />
+            </div>
+            <div class="relative group project" data-category="mobile">
+              <a
+                data-modal-target="default-modal8"
+                data-modal-toggle="default-modal8"
+                class="absolute cursor-pointer inset-0 flex items-center justify-center z-10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >Show More</a
+              >
+              <img class="h-auto max-w-full rounded-lg object-cover transition duration-300 group-hover:brightness-50" src="resource/images/project/8.jpg" alt="" />
+            </div>
+            <div class="relative group project" data-category="mobile">
+              <a
+                data-modal-target="default-modal9"
+                data-modal-toggle="default-modal9"
+                class="absolute cursor-pointer inset-0 flex items-center justify-center z-10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >Show More</a
+              >
+              <img class="h-auto max-w-full rounded-lg object-cover transition duration-300 group-hover:brightness-50" src="resource/images/project/9.jpg" alt="" />
+            </div>
+            <div class="relative group project" data-category="web">
+              <a
+                data-modal-target="default-modal10"
+                data-modal-toggle="default-modal10"
+                class="absolute cursor-pointer inset-0 flex items-center justify-center z-10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >Show More</a
+              >
+              <img class="h-auto max-w-full rounded-lg object-cover transition duration-300 group-hover:brightness-50" src="resource/images/project/10.jpg" alt="" />
+            </div>
+            <div class="relative group project" data-category="web">
+              <a
+                data-modal-target="default-modal11"
+                data-modal-toggle="default-modal11"
+                class="absolute cursor-pointer inset-0 flex items-center justify-center z-10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >Show More</a
+              >
+              <img class="h-auto max-w-full rounded-lg object-cover transition duration-300 group-hover:brightness-50" src="resource/images/project/11.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div id="default-modal" tabindex="-1" aria-hidden="true" class="modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+          <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-primary rounded-lg shadow">
+              <!-- Modal header -->
+              <div class="flex items-center justify-between p-4 md:p-5 rounded-t">
+                <h3 class="text-xl font-semibold text-greenLight dark:text-white">Newspedia Website</h3>
+                <button
+                  type="button"
+                  class="text-gray-400 bg-transparent transition hover:bg-greenLight hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  data-modal-hide="default-modal"
+                >
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="p-4 md:p-5 space-y-4">
+                <p class="text-base leading-relaxed text-gray-400">
+                  Newspedia is a website designed using HTML and CSS with the Tailwind framework, along with JavaScript for interactivity. This website offers a responsive and engaging news reading experience. Data on Newspedia is stored
+                  and managed using Firebase, ensuring security and fast access to information for users.
+                </p>
+                <div class="flex justify-end">
+                  <a href="" class="text-greenLight hover:text-greenDark transition">Check on Github</a>
+                </div>
+              </div>
+              <!-- Modal footer -->
+            </div>
+          </div>
+        </div>
+        <div id="default-modal2" tabindex="-1" aria-hidden="true" class="modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+          <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-primary rounded-lg shadow">
+              <!-- Modal header -->
+              <div class="flex items-center justify-between p-4 md:p-5 rounded-t">
+                <h3 class="text-xl font-semibold text-greenLight dark:text-white">Startup Restaurant</h3>
+                <button
+                  type="button"
+                  class="text-gray-400 bg-transparent transition hover:bg-greenLight hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  data-modal-hide="default-modal2"
+                >
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="p-4 md:p-5 space-y-4">
+                <p class="text-base leading-relaxed text-gray-400">
+                  Startup Restaurant is a website designed using HTML and CSS with the Bootstrap framework, along with JavaScript for interactivity. The website features a shopping cart that allows customers to easily order food.
+                  Additionally, it includes an admin panel for efficient content and order management. Data on Startup Restaurant is stored and managed using Firebase, ensuring security and fast access to information for users."
+                </p>
+
+                <div class="flex justify-end">
+                  <a href="" class="text-greenLight hover:text-greenDark transition">Check on Github</a>
+                </div>
+              </div>
+              <!-- Modal footer -->
+            </div>
+          </div>
+        </div>
+        <div id="default-modal3" tabindex="-1" aria-hidden="true" class="modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+          <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-primary rounded-lg shadow">
+              <!-- Modal header -->
+              <div class="flex items-center justify-between p-4 md:p-5 rounded-t">
+                <h3 class="text-xl font-semibold text-greenLight dark:text-white">Admin Panel Barbershop</h3>
+                <button
+                  type="button"
+                  class="text-gray-400 bg-transparent transition hover:bg-greenLight hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  data-modal-hide="default-modal3"
+                >
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="p-4 md:p-5 space-y-4">
+                <p class="text-base leading-relaxed text-gray-400">
+                  Admin Panel Barber Shop is a website designed using PHP and CSS with the Bootstrap framework, along with JavaScript for interactivity. The website features an admin panel that allows efficient management of services,
+                  schedules, and customer data. Data on Admin Panel Barber Shop is stored and managed using an SQL database, ensuring security and fast access to information for users.
+                </p>
+
+                <div class="flex justify-end">
+                  <a href="" class="text-greenLight hover:text-greenDark transition">Check on Github</a>
+                </div>
+              </div>
+              <!-- Modal footer -->
+            </div>
+          </div>
+        </div>
+        <div id="default-modal4" tabindex="-1" aria-hidden="true" class="modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+          <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-primary rounded-lg shadow">
+              <!-- Modal header -->
+              <div class="flex items-center justify-between p-4 md:p-5 rounded-t">
+                <h3 class="text-xl font-semibold text-greenLight dark:text-white">PPDB School</h3>
+                <button
+                  type="button"
+                  class="text-gray-400 bg-transparent transition hover:bg-greenLight hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  data-modal-hide="default-modal4"
+                >
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="p-4 md:p-5 space-y-4">
+                <p class="text-base leading-relaxed text-gray-400">
+                  PPDB SCHOOL is a website designed using PHP and CSS with the Bootstrap framework, along with JavaScript for interactivity. The website features an admin panel that enables efficient management of the new student admission
+                  process (PPDB), including cumulative grading and student registration. Data on PPDB SCHOOL is stored and managed using an SQL database, ensuring security and fast access to information for users.
+                </p>
+
+                <div class="flex justify-end">
+                  <a href="" class="text-greenLight hover:text-greenDark transition">Check on Github</a>
+                </div>
+              </div>
+              <!-- Modal footer -->
+            </div>
+          </div>
+        </div>
+        <div id="default-modal5" tabindex="-1" aria-hidden="true" class="modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+          <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-primary rounded-lg shadow">
+              <!-- Modal header -->
+              <div class="flex items-center justify-between p-4 md:p-5 rounded-t">
+                <h3 class="text-xl font-semibold text-greenLight dark:text-white">Startup Restaurant App</h3>
+                <button
+                  type="button"
+                  class="text-gray-400 bg-transparent transition hover:bg-greenLight hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  data-modal-hide="default-modal5"
+                >
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="p-4 md:p-5 space-y-4">
+                <p class="text-base leading-relaxed text-gray-400">
+                  Startup Restaurant is an application designed using Java technology, featuring a shopping cart and integrated ordering system within its website's admin panel. This application allows users to easily place food orders,
+                  while the admin panel facilitates efficient management of menus, orders, and restaurant information. Data on Startup Restaurant is stored and managed using Firebase, ensuring security and speed in information management.
+                </p>
+
+                <div class="flex justify-end">
+                  <a href="" class="text-greenLight hover:text-greenDark transition">Check on Github</a>
+                </div>
+              </div>
+              <!-- Modal footer -->
+            </div>
+          </div>
+        </div>
+        <div id="default-modal6" tabindex="-1" aria-hidden="true" class="modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+          <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-primary rounded-lg shadow">
+              <!-- Modal header -->
+              <div class="flex items-center justify-between p-4 md:p-5 rounded-t">
+                <h3 class="text-xl font-semibold text-greenLight dark:text-white">Restaurant App</h3>
+                <button
+                  type="button"
+                  class="text-gray-400 bg-transparent transition hover:bg-greenLight hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  data-modal-hide="default-modal6"
+                >
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="p-4 md:p-5 space-y-4">
+                <p class="text-base leading-relaxed text-gray-400">
+                  Restaurant App is a Application designed to help users find restaurants anywhere, utilizing an API-based approach to access location and restaurant details. This application is built using Flutter, providing a responsive
+                  user experience accessible across various mobile devices.
+                </p>
+
+                <div class="flex justify-end">
+                  <a href="" class="text-greenLight hover:text-greenDark transition">Check on Github</a>
+                </div>
+              </div>
+              <!-- Modal footer -->
+            </div>
+          </div>
+        </div>
+        <div id="default-modal7" tabindex="-1" aria-hidden="true" class="modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+          <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-primary rounded-lg shadow">
+              <!-- Modal header -->
+              <div class="flex items-center justify-between p-4 md:p-5 rounded-t">
+                <h3 class="text-xl font-semibold text-greenLight dark:text-white">Movie Catalogue</h3>
+                <button
+                  type="button"
+                  class="text-gray-400 bg-transparent transition hover:bg-greenLight hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  data-modal-hide="default-modal7"
+                >
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="p-4 md:p-5 space-y-4">
+                <p class="text-base leading-relaxed text-gray-400">
+                  Movie Catalogue App is an application designed to search for the latest movies anywhere, utilizing the MovieDB API to access film information. This application is developed using Java, with SQLite database for user account
+                  management.
+                </p>
+
+                <div class="flex justify-end">
+                  <a href="" class="text-greenLight hover:text-greenDark transition">Check on Github</a>
+                </div>
+              </div>
+              <!-- Modal footer -->
+            </div>
+          </div>
+        </div>
+        <div id="default-modal8" tabindex="-1" aria-hidden="true" class="modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+          <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-primary rounded-lg shadow">
+              <!-- Modal header -->
+              <div class="flex items-center justify-between p-4 md:p-5 rounded-t">
+                <h3 class="text-xl font-semibold text-greenLight dark:text-white">Newspedia App</h3>
+                <button
+                  type="button"
+                  class="text-gray-400 bg-transparent transition hover:bg-greenLight hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  data-modal-hide="default-modal8"
+                >
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="p-4 md:p-5 space-y-4">
+                <p class="text-base leading-relaxed text-gray-400">
+                  Newspedia App is a sophisticated news application developed using Java technology. The app utilizes Firebase as its robust database system to efficiently access, manage, and deliver the latest news updates. This
+                  integration ensures users experience seamless and secure access to timely information across various topics and categories
+                </p>
+                <div class="flex justify-end">
+                  <a href="" class="text-greenLight hover:text-greenDark transition">Check on Github</a>
+                </div>
+              </div>
+              <!-- Modal footer -->
+            </div>
+          </div>
+        </div>
+        <div id="default-modal9" tabindex="-1" aria-hidden="true" class="modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+          <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-primary rounded-lg shadow">
+              <!-- Modal header -->
+              <div class="flex items-center justify-between p-4 md:p-5 rounded-t">
+                <h3 class="text-xl font-semibold text-greenLight dark:text-white">Library Book App</h3>
+                <button
+                  type="button"
+                  class="text-gray-400 bg-transparent transition hover:bg-greenLight hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  data-modal-hide="default-modal9"
+                >
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="p-4 md:p-5 space-y-4">
+                <p class="text-base leading-relaxed text-gray-400">
+                  The Library Book App is developed using Flutter technology, designed with a save feature that allows users to conveniently store their favorite book lists. With a user-friendly interface and seamless integration, users can
+                  easily manage their book collections, making the reading experience more enjoyable and organized.
+                </p>
+
+                <div class="flex justify-end">
+                  <a href="" class="text-greenLight hover:text-greenDark transition">Check on Github</a>
+                </div>
+              </div>
+              <!-- Modal footer -->
+            </div>
+          </div>
+        </div>
+        <div id="default-modal10" tabindex="-1" aria-hidden="true" class="modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+          <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-primary rounded-lg shadow">
+              <!-- Modal header -->
+              <div class="flex items-center justify-between p-4 md:p-5 rounded-t">
+                <h3 class="text-xl font-semibold text-greenLight dark:text-white">Rumah Cupang</h3>
+                <button
+                  type="button"
+                  class="text-gray-400 bg-transparent transition hover:bg-greenLight hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  data-modal-hide="default-modal10"
+                >
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="p-4 md:p-5 space-y-4">
+                <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                  My first project is Rumah Cupang, a website designed using HTML and CSS with Native, along with JavaScript for interactivity. This website offers a responsive and engaging news reading experience.
+                </p>
+
+                <div class="flex justify-end">
+                  <a href="" class="text-greenLight hover:text-greenDark transition">Check on Github</a>
+                </div>
+              </div>
+              <!-- Modal footer -->
+            </div>
+          </div>
+        </div>
+        <div id="default-modal11" tabindex="-1" aria-hidden="true" class="modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+          <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-primary rounded-lg shadow">
+              <!-- Modal header -->
+              <div class="flex items-center justify-between p-4 md:p-5 rounded-t">
+                <h3 class="text-xl font-semibold text-greenLight dark:text-white">Rosalia Bakery</h3>
+                <button
+                  type="button"
+                  class="text-gray-400 bg-transparent transition hover:bg-greenLight hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  data-modal-hide="default-modal11"
+                >
+                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="p-4 md:p-5 space-y-4">
+                <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                  Rosalia Bakery is a website designed using HTML and CSS with the Bootstrap framework, along with JavaScript for interactivity. This website offers a responsive and engaging news reading experience.
+                </p>
+
+                <div class="flex justify-end">
+                  <a href="" class="text-greenLight hover:text-greenDark transition">Check on Github</a>
+                </div>
+              </div>
+              <!-- Modal footer -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="max-w-full h-fit mt-32" id="contact">
+        <h2 class="justify-center flex text-3xl text-greenDark font-bold mb-3">My Contact</h2>
+        <h2 class="justify-center flex text-xl text-greenLight font-semibold">Contact</h2>
+        <div class="max-w-5xl mt-16 px-5 flex mx-auto">
+          <div class="grid grid-cols-1 mx-auto sm:grid-cols-2 md:grid-cols-3 gap-7 justify-center">
+            <div class="rounded-lg bg-primary w-auto px-5 h-48 items-center text-center m-0">
+              <div class="flex justify-center">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-20 h:20">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z"
+                      fill="#5C8374"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <h2 class="text-greenLight font-semibold">Email</h2>
+              <h2 class="text-slate-300 text-sm mb-3">roger.simanjuntak21@gmail.com</h2>
+              <a href="https://www.linkedin.com/in/ngabroger" class="text-greenLight group-hover:text-greenDark hover:text-greenDark group flex justify-center"
+                >Contact me
+                <svg
+                  class="w-6 h-6 ml-1 text-greenLight group-hover:text-greenDark transition-transform group-hover:translate-x-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4" />
+                </svg>
+              </a>
+            </div>
+            <div class="rounded-lg bg-primary w-auto px-5 h-48 items-center text-center m-0">
+              <div class="flex justify-center">
+                <svg class="w-16 my-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M6.014 8.00613C6.12827 7.1024 7.30277 5.87414 8.23488 6.01043L8.23339 6.00894C9.14051 6.18132 9.85859 7.74261 10.2635 8.44465C10.5504 8.95402 10.3641 9.4701 10.0965 9.68787C9.7355 9.97883 9.17099 10.3803 9.28943 10.7834C9.5 11.5 12 14 13.2296 14.7107C13.695 14.9797 14.0325 14.2702 14.3207 13.9067C14.5301 13.6271 15.0466 13.46 15.5548 13.736C16.3138 14.178 17.0288 14.6917 17.69 15.27C18.0202 15.546 18.0977 15.9539 17.8689 16.385C17.4659 17.1443 16.3003 18.1456 15.4542 17.9421C13.9764 17.5868 8 15.27 6.08033 8.55801C5.97237 8.24048 5.99955 8.12044 6.014 8.00613Z"
+                      fill="#5C8374"
+                    ></path>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12 23C10.7764 23 10.0994 22.8687 9 22.5L6.89443 23.5528C5.56462 24.2177 4 23.2507 4 21.7639V19.5C1.84655 17.492 1 15.1767 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23ZM6 18.6303L5.36395 18.0372C3.69087 16.4772 3 14.7331 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C11.0143 21 10.552 20.911 9.63595 20.6038L8.84847 20.3397L6 21.7639V18.6303Z"
+                      fill="#5C8374"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <h2 class="text-greenLight font-semibold">Whatsapp</h2>
+              <h2 class="text-slate-300 text-sm mb-3">085156295013</h2>
+              <a href="https://www.linkedin.com/in/ngabroger" class="text-greenLight group-hover:text-greenDark hover:text-greenDark group flex justify-center"
+                >Contact me
+                <svg
+                  class="w-6 h-6 ml-1 text-greenLight group-hover:text-greenDark transition-transform group-hover:translate-x-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4" />
+                </svg>
+              </a>
+            </div>
+            <div class="rounded-lg bg-primary w-auto px-5 h-48 items-center text-center m-0">
+              <div class="flex justify-center">
+                <svg class="w-16 my-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="#5C8374"></path>
+                    <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" fill="#5C8374"></path>
+                    <path
+                      d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z"
+                      fill="#5C8374"
+                    ></path>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z"
+                      fill="#5C8374"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <h2 class="text-greenLight font-semibold">Linkedin</h2>
+              <h2 class="text-slate-300 text-sm mb-3">Roger Simanjuntak</h2>
+              <a href="https://www.linkedin.com/in/ngabroger" class="text-greenLight group-hover:text-greenDark hover:text-greenDark group flex justify-center"
+                >Contact me
+                <svg
+                  class="w-6 h-6 ml-1 text-greenLight group-hover:text-greenDark transition-transform group-hover:translate-x-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mt-16">
+        <footer class="bg-primary rounded-lg shadow">
+          <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="flex items-center text-center justify-center">
+              <a href="#" class="flex items-center mb-4 sm:mb-0 rtl:space-x-reverse text-slate-300">
+                <img src="/resource/images/logo.svg" class="h-32" alt="ngabroger" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap mr-10">Ngabroger</span>
+              </a>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <span class="block text-sm text-gray-300 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">Ngabroger</a>. All Rights Reserved.</span>
+          </div>
+        </footer>
+      </section>
     </main>
-
     <script>
-      let loader = document.getElementById("preloader");
-      window.addEventListener("load", function () {
-        loader.style.display = "none";
+      document.addEventListener("DOMContentLoaded", function () {
+        const categoryButtons = document.querySelectorAll(".category-button");
+        const projects = document.querySelectorAll(".project");
+
+        categoryButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const category = button.getAttribute("data-category");
+
+            projects.forEach((project) => {
+              project.style.display = "none"; // Reset display style
+              if (category === "all" || project.getAttribute("data-category") === category) {
+                setTimeout(() => {
+                  project.style.display = "block";
+                  project.classList.add("fadeIn");
+                }, 100); // Delay to ensure reset
+              } else {
+                project.classList.remove("fadeIn");
+              }
+            });
+
+            categoryButtons.forEach((btn) => btn.classList.remove("active"));
+            button.classList.add("active");
+          });
+        });
+
+        // Show all projects on page load
+        projects.forEach((project) => {
+          project.style.display = "block";
+          project.classList.add("fadeIn");
+        });
+        categoryButtons.forEach((btn) => btn.classList.remove("active"));
+        document.querySelector(".category-button[data-category='all']").classList.add("active");
       });
-    </script>
-    <!-- script type text for animation -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script> -->
-    <script>
-      feather.replace();
     </script>
   </body>
 </html>
