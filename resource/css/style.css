@@ -1,48 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-.jumbotron {
-  font-family: "Poppins", sans-serif;
-  padding-top: 6rem;
-  background-image: url("images/bg-img.png");
-  background-size: cover;
-  background-attachment: fixed;
-  font-weight: bold;
-  background-position: 0 -100px;
-  color: #2d2d2d;
+.scroll-downs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  
+  width :34px;
+  height: 55px;
 }
-#about {
-  background-color: #baff39;
-  justify-content: center;
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
 }
-#projects {
-  background-color: #eae6e6;
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
 }
-.hovered-card {
-  transition: 0.3s;
-}
-#skill {
-  background-color: #baff39;
-}
-#contact {
-  background-color: #eae6e6;
-}
-.hovered-card:hover {
-  transform: scale(1.1);
-}
-
-section {
-  padding-top: 5rem;
-}
-
-#preloader {
-  background: #a8a7a7ee url(images/preloader.gif) no-repeat center center;
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  z-index: 100;
-}
-.smaller-image {
-  max-width: 33%;
-  margin: 0 auto;
-  height: auto;
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
 }
